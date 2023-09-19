@@ -1,6 +1,3 @@
-import sys
-
-
 def DFS(v):
     if v == (n+1):  # 단말 노드 -> 출력
         for i in range(1, n+1):

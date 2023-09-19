@@ -1,6 +1,3 @@
-import sys
-
-
 def DFS(v):
     if v > 7:
         return

@@ -1,6 +1,3 @@
-import sys
-
-
 def DFS(L, sum):  # L: Level(트리 레벨)
     if sum > total // 2:  # 시간복잡도 개선
         return

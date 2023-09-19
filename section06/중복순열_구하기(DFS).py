@@ -1,6 +1,3 @@
-import sys
-
-
 def DFS(L):
     global cnt
 

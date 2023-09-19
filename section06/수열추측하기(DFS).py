@@ -1,5 +1,3 @@
-import sys
-
 def DFS(L, sum):
     if L == n and sum == f:
         for x in p:
