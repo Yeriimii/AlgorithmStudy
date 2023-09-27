@@ -22,3 +22,4 @@ if __name__ == '__main__':
         pt.append(b)  # 시간
     res = -2147000000
     DFS(0, 0, 0)
+    print(res)
