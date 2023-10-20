@@ -2,10 +2,7 @@ if __name__ == "__main__":
     T = int(input())
     for _ in range(T):
         n = int(input())
-<<<<<<< HEAD
-=======
         dy = [[] for _ in range(n)]
->>>>>>> origin/master
         board = [list(map(int, input().split())) for _ in range(2)]
         if n > 1:
             board[0][1] += board[1][0]
