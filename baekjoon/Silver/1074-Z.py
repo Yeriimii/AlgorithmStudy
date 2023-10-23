@@ -15,15 +15,15 @@ def DFS(L, size, r, c, num):
             num += (2 ** (N - L)) ** 2 * 3
             DFS(L+1, size//2, r - size//2, c - size//2, num)
         elif r >= size // 2 and c < size // 2:
-            # 아래 왼쪽
+            # 아래 왼쪽 (3 사분면)
             num += (2 ** (N - L)) ** 2 * 2
             DFS(L+1, size//2, r - size//2, c, num)
         elif r < size // 2 and c >= size // 2:
-            # 위 오른쪽
+            # 위 오른쪽 (1 사분면)
             num += (2 ** (N - L)) ** 2 * 1
             DFS(L+1, size//2, r, c - size//2, num)
         else:
-            # 위 왼쪽
+            # 위 왼쪽 (1 사분면)
             num += (2 ** (N - L)) ** 2 * 0
             DFS(L+1, size//2, r, c, num)
 
