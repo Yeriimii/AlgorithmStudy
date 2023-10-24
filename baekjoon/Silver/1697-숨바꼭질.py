@@ -1,7 +1,7 @@
 from collections import deque
 
 n, k = map(int, input().split())
-visit = [0] * 100000
+visit = [0] * 100001
 Q = deque()
 Q.append((n, 0))
 res = 2147000000
@@ -17,7 +17,7 @@ while Q:
     right = cur[0] + 1
     multi = cur[0] * 2
     if multi <= 100000 and visit[multi] == 0:
-        Q.append((multi, cur[1]+1))
+        Q.append((multi, cur[1]))
     if 0 <= left and visit[left] == 0:
         Q.append((left, cur[1]+1))
     if right <= 100000 and visit[right] == 0:
