@@ -14,22 +14,22 @@ Elist = [[] for _ in range(V + 1)]  # 간선 저장
 # 1번 노드는 자기 자신으로 가는 거리가 0 임을 우선순위 큐에 삽입
 heap = [[0, 1]]
 for _ in range(E):
-    s, e, w = map(int, input().split())
-    Elist[s].append([w, e])  # s -> e 연결(가중치 w)
-    Elist[e].append([w, s])  # e -> s 연결(가중치 w)
+    start_node, end_node, weight = map(int, input().split())
+    Elist[start_node].append([weight, end_node])  # s -> e 연결(가중치 w)
+    Elist[end_node].append([weight, start_node])  # e -> s 연결(가중치 w)
 
 answer = 0
 cnt = 0
 while heap:
     if cnt == V:  # 중단점: 모든 노드에 방문한 횟수 == 모든 노드 개수
         break
-    w, s = heapq.heappop(heap)  # 가중치, 현재 노드
-    if not visited[s]:  # 각 노드당 한 번씩만 방문
-        visited[s] = True
-        answer += w  # 연결 거리 누적 합
+    weight, start_node = heapq.heappop(heap)  # 가중치, 현재 노드
+    if not visited[start_node]:  # 각 노드당 한 번씩만 방문
+        visited[start_node] = True
+        answer += weight  # 연결 거리 누적 합
         cnt += 1  # 노드 방문 추가
         # 현재 노드와 연결된 노드들을 우선순위 큐에 삽입
-        for i in Elist[s]:
-            heapq.heappush(heap, i)
+        for next_node in Elist[start_node]:
+            heapq.heappush(heap, next_node)
 
 print(answer)
