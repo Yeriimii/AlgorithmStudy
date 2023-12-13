@@ -21,10 +21,10 @@ for i in range(1, x + 1):
             else:
                 arr[i][j][k] = max(arr[i][j][k - 1], arr[i][j - 1][k], arr[i - 1][j][k])
 
-ans = -1
+res = -1
 
 for i in range(x + 1):
     for j in range(y + 1):
-        ans = max(max(arr[i][j]), ans)
+        res = max(max(arr[i][j]), res)
 
-print(ans)
+print(res)
