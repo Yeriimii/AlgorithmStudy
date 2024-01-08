@@ -6,6 +6,7 @@ for i in range(n):
     lst.append(list(map(int, input().split())))
 
 lst.sort(key=lambda x: (x[1]))
+print(lst)
 p_list = []
 for i in lst:
     p = i[0]
