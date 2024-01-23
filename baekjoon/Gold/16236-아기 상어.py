@@ -79,4 +79,3 @@ while dQ:
         eat(now_r, now_c, spend_time, target_r, target_c)
         dQ.append((target_r, target_c))
 print(now_time)
-
