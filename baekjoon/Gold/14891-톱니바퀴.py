@@ -36,10 +36,6 @@ if __name__ == '__main__':
     gears = [input() for _ in range(4)]
     state = [False for _ in range(3)]
 
-    for i in range(3):
-        if gears[i][2] != gears[i + 1][-2]:
-            state[i] = True
-
     K = int(input())
     for _ in range(K):
         idx, direction = map(int, input().split())
